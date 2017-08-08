@@ -25,7 +25,7 @@ Pika是360DBA和基础架构组联合开发的类Redis存储系统，完全支�
 
 ### 压测工具
 
-[**vire-benchmark**](_posts/2017-08-08-vire-benchmark.md)
+[**vire-benchmark**](vire-benchmark)
 
 ### 测试一
 
