@@ -23,6 +23,10 @@ Pika是360DBA和基础架构组联合开发的类Redis存储系统，完全支�
 
 **NETWORK**：10000baseT/Full * 2
 
+**OS**：centos 6.6
+
+**Pika版本**：2.2.4
+
 ### 压测工具
 
 [**vire-benchmark**](vire-benchmark)
@@ -177,6 +181,7 @@ RPUSH: 195186.69 requests per second
 LPOP: 131156.14 requests per second
 RPOP: 152292.77 requests per second
 LPUSH (needed to benchmark LRANGE): 196734.20 requests per second
+LRANGE_10 (first 10 elements): 334448.16 requests per second
 LRANGE_100 (first 100 elements): 50705.12 requests per second
 LRANGE_300 (first 300 elements): 16745.16 requests per second
 LRANGE_450 (first 450 elements): 6787.94 requests per second
@@ -188,6 +193,7 @@ HINCRBY: 153364.81 requests per second
 HINCRBYFLOAT: 141095.47 requests per second
 HGET: 506791.00 requests per second
 HMSET (10 fields): 27777.31 requests per second
+HMGET (10 fields): 38998.52 requests per second
 HGETALL: 109059.58 requests per second
 ZADD: 120583.62 requests per second
 ZREM: 161689.33 requests per second
