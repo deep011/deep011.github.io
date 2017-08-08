@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Redis/Mc压测工具
+title: Redis,Mc压测工具
 ---
 
 ## 简述
