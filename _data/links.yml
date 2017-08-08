@@ -1,8 +1,8 @@
 - url: /
   title: Home
 
-- url: https://github.com/deep011
-  title: Github
+- url: /categories
+  title: Categories
 
 - url: /about
   title: About
