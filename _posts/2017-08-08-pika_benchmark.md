@@ -59,7 +59,7 @@ value：128字节
 
 #### 测试结果
 
-```shell
+```c
 ====== GET ======
   10000000 requests completed in 23.10 seconds
   200 parallel clients
@@ -75,7 +75,7 @@ value：128字节
 432862.97 requests per second
 ```
 
-```shell
+```c
 ====== SET ======
   10000000 requests completed in 36.15 seconds
   200 parallel clients
@@ -140,3 +140,55 @@ value：128字节
 #### 结论
 
 get/set 响应时间 99.9%都在2ms以内。
+
+### 测试三
+
+#### 测试目的
+
+在pika最佳的worker线程数下，查看各命令的极限QPS。
+
+#### 测试条件
+
+**pika的worker线程数**：20
+**key数量**：10000
+**field数量**：100（list除外）
+**value**：128字节
+**命令执行次数**：1000万（lrange除外）
+
+#### 测试结果
+
+```c
+PING_INLINE: 548606.50 requests per second
+PING_BULK: 544573.31 requests per second
+SET: 231830.31 requests per second
+GET: 512163.91 requests per second
+INCR: 230861.56 requests per second
+MSET (10 keys): 94991.12 requests per second
+LPUSH: 196093.81 requests per second
+RPUSH: 195186.69 requests per second
+LPOP: 131156.14 requests per second
+RPOP: 152292.77 requests per second
+LPUSH (needed to benchmark LRANGE): 196734.20 requests per second
+LRANGE_100 (first 100 elements): 50705.12 requests per second
+LRANGE_300 (first 300 elements): 16745.16 requests per second
+LRANGE_450 (first 450 elements): 6787.94 requests per second
+LRANGE_600 (first 600 elements): 3170.38 requests per second
+SADD: 160885.52 requests per second
+SPOP: 128920.80 requests per second
+HSET: 180209.41 requests per second
+HINCRBY: 153364.81 requests per second
+HINCRBYFLOAT: 141095.47 requests per second
+HGET: 506791.00 requests per second
+HMSET (10 fields): 27777.31 requests per second
+HGETALL: 109059.58 requests per second
+ZADD: 120583.62 requests per second
+ZREM: 161689.33 requests per second
+PFADD: 6153.47 requests per second
+PFCOUNT: 28312.57 requests per second
+PFADD (needed to benchmark PFMERGE): 6166.37 requests per second
+PFMERGE: 6007.09 requests per second
+```
+
+#### 结论
+
+整体表现很不错，个别命令表现较弱（LRANGE，PFADD，PFMERGE）。
