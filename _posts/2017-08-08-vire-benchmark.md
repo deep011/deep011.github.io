@@ -7,7 +7,7 @@ title: Redis,Mc压测工具
 
 **vire-benchmark**是一个用于压测KV系统的工具（目前支持redis协议和memcached协议）。
 
-由于redis-benchmark只能测出像redis这样单线程KV系统的极限QPS，为了能压测出多线程/多进程模型的KV系统的性能数据，我基于redis-benchmark进行了二次开发。
+由于redis-benchmark只能测出像redis这样单线程KV系统的极限QPS，为了能压测出多线程/多进程模型的KV系统的性能数据，我基于redis-benchmark进行了简单的二次开发。
 
 主要的新feature如下：
 
@@ -36,7 +36,7 @@ tests/vire-benchmark -h
 - -f，用法如-r，用于控制hash，set中field的随机数量。
 - -S，指定只测试相关类型的命令，比如 server,string,hash,list,set,sortedset。
 
-```shell
+```
 Usage: vire-benchmark [-h <host>] [-p <port>] [-c <clients>] [-n <requests]> [-k <boolean>]
 
  -h <hostname>      Server hostname (default 127.0.0.1)
