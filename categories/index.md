@@ -1,4 +1,4 @@
 ---
 layout: page
-title: Categories
+title: 分类
 ---
