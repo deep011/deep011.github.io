@@ -47,7 +47,7 @@ CPU未绑定
 
 #### 测试结果
 
-说明：横轴Pika线程数，纵轴QPS，value为128字节
+说明：横轴Pika线程数，纵轴QPS，value为128字节。set3/get7代表30%的set和70%的get。
 
 <img src="/public/images/pika_benchmark/pika_threads_test.png" width="1000px" />
 
