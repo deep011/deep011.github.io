@@ -28,14 +28,14 @@ title: RocksDB Options
 + **db_write_buffer_size**：
 + **dump_malloc_stats**：
 + **table_cache_numshardbits**：
-+ **max_open_files **：  最多可以缓存多少file descriptors。
++ **max_open_files**：最多可以缓存多少file descriptors。
 + **base_background_compactions**：
-+ **max_background_compactions**： 最大的后台compaction线程数。
++ **max_background_compactions**：最大的后台compaction线程数。
 + **db_log_dir**：
 + **use_fsync**：
 + **use_adaptive_mutex**：
 + **writable_file_max_buffer_size**：
-+ **max_background_flushes **： 最大的后台磁盘flush线程数。
++ **max_background_flushes**：最大的后台磁盘flush线程数。
 + **compaction_readahead_size**：
 + **skip_stats_update_on_db_open**：
 + **skip_log_error_on_recovery**：
@@ -60,7 +60,7 @@ title: RocksDB Options
 + **max_file_opening_threads**：
 + **allow_fallocate**：
 + **avoid_flush_during_recovery**：
-+ **allow_os_buffer**： 是否允许文件缓存到OS Cache。
++ **allow_os_buffer**：是否允许文件缓存到OS Cache。
 + **allow_mmap_reads**：
 + **advise_random_on_open**：
 
