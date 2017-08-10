@@ -3,7 +3,9 @@ layout: post
 title: RocksDB(5.0.1) Options
 ---
 
-## DBOptions
+*****
+
+### DBOptions
 
 + **info_log_level**：
 + **write_thread_max_yield_usec**：
@@ -64,7 +66,7 @@ title: RocksDB(5.0.1) Options
 + **allow_mmap_reads**：
 + **advise_random_on_open**：
 
-## CFOptions
+### CFOptions
 
 + **compaction_filter_factory**：
 + **memtable_factory**：
@@ -112,7 +114,7 @@ title: RocksDB(5.0.1) Options
 + **memtable_prefix_bloom_size_ratio**：
 + **report_bg_io_stats**：
 
-## TableOptions
+### TableOptions
 
 + **read_amp_bytes_per_bit**：
 + **skip_table_builder_flush**：
