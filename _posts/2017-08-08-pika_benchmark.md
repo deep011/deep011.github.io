@@ -209,7 +209,7 @@ PFMERGE: 6007.09 requests per second
 
 整体表现很不错，个别命令表现较弱（LRANGE，PFADD，PFMERGE）。
 
-### 测试三
+### 测试四
 
 #### 测试目的
 
