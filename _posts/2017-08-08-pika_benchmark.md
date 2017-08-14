@@ -208,3 +208,31 @@ PFMERGE: 6007.09 requests per second
 #### 结论
 
 整体表现很不错，个别命令表现较弱（LRANGE，PFADD，PFMERGE）。
+
+### 测试三
+
+#### 测试目的
+
+Pika与Redis的极限QPS对比。
+
+#### 测试条件
+
+**pika的worker线程数**：20
+
+**key数量**：10000
+
+**field数量**：100（list除外）
+
+**value**：128字节
+
+**命令执行次数**：1000万（lrange除外）
+
+**Redis版本**：3.2.0
+
+#### 测试结果
+
+<img src="/public/images/pika_benchmark/pika_vs_redis_qps.png" width="1000px" />
+
+#### 结论
+
+Pika单实例的极限QPS不输于Redis单实例。
